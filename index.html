@@ -1,7 +1,7 @@
 
-		<canvas id="myChart" width="800px" height="1000px"></canvas>
+		<canvas id="myChart" width="1000px" height="1000px"></canvas>
         <p>
-            <canvas id="myChart2" width="800px" height="500px"></canvas>
+            <canvas id="myChart2" width="1000px" height="500px"></canvas>
         </p>
 	<script src="./Chart.bundle.min.js"></script>
 	<script>
@@ -9,7 +9,7 @@
         var myLineChart = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: ["06/19", "06/20", "06/20", 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+                labels: ["06/19", "06/20"],
                 datasets: [
                     {
                         label: "Users",
@@ -20,7 +20,7 @@
                 ]
             },
             options: {
-                responsive: false,
+                responsive: true,
                 scales: {
                     yAxes: [{
                         display: true,
@@ -39,10 +39,10 @@
         var myLineChart = new Chart(ctx2, {
             type: 'line',
             data: {
-                labels: ["06/19", "06/20", "06/20", 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+                labels: ["06/20"],
                 datasets: [
                     {
-                        label: "Circulation",
+                        label: "Circulation(cv)",
 						borderColor: 'rgb(127, 255, 0)',
 						backgroundColor: 'rgba(255, 255, 255, 0.1)',
                         data: [5665776103]
@@ -50,7 +50,7 @@
                 ]
             },
             options: {
-                responsive: false,
+                responsive: true,
                 scales: {
                     yAxes: [{
                         display: true,
