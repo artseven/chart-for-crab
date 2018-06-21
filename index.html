@@ -1,67 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+		<div style="padding: 100px">
+                <canvas id="myChart" width="1000px" height="1000px"></canvas>
+            </div>
+    
+            <div style="padding: 100px">
+                <canvas id="myChart2" width="1000px" height="500px"></canvas>
+             </div>
 
-		<canvas id="myChart" width="1000px" height="1000px"></canvas>
-        <p>
-            <canvas id="myChart2" width="1000px" height="500px"></canvas>
-        </p>
-	<script src="./Chart.bundle.min.js"></script>
-	<script>
-        var ctx = document.getElementById("myChart").getContext('2d');
-        var myLineChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ["06/19", "06/20"],
-                datasets: [
-                    {
-                        label: "Users",
-						borderColor: 'rgb(0, 0, 255)',
-						backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                        data: [13271, 13260, 13259]
-                    }
-                ]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    yAxes: [{
-                        display: true,
-                        ticks: {
-                            min: 13000,
-                            stepSize: 10
+            <script src="./Chart.bundle.min.js"></script>
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var myLineChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ["06/19", "06/20", "06/21"],
+                        datasets: [
+                            {
+                                label: "Users",
+                                borderColor: 'rgb(0, 0, 255)',
+                                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                data: [13271, 13260, 13270]
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            yAxes: [{
+                                display: true,
+                                ticks: {
+                                    min: 13000,
+                                    stepSize: 10
+                                }
+                            }]
                         }
-                    }]
-                }
-            }
-        },
-
-    )
-
-    var ctx2 = document.getElementById("myChart2").getContext('2d');
-        var myLineChart = new Chart(ctx2, {
-            type: 'line',
-            data: {
-                labels: ["06/20"],
-                datasets: [
-                    {
-                        label: "Circulation(cv)",
-						borderColor: 'rgb(127, 255, 0)',
-						backgroundColor: 'rgba(255, 255, 255, 0.1)',
-                        data: [5665776103]
                     }
-                ]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    yAxes: [{
-                        display: true,
-                        ticks: {
-                            min: 5500000000,
-                            stepSize: 10000000
-                        }
-                    }]
-                }
-            }
-        }
+                })
 
-    )
-        </script>
+                var ctx2 = document.getElementById("myChart2").getContext('2d');
+                var myLineChart = new Chart(ctx2, {
+                    type: 'line',
+                    data: {
+                        labels: ["06/20", "06/21"],
+                        datasets: [
+                            {
+                                label: "Circulation(cv)",
+                                borderColor: 'rgb(127, 255, 0)',
+                                backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                data: [5665776103, 5665776103]
+                            }
+                        ]
+                    },
+                    options: {
+                        responsive: true,
+                        scales: {
+                            yAxes: [{
+                                display: true,
+                                ticks: {
+                                    min: 5500000000,
+                                    stepSize: 10000000
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+</body>
+</html>
+
+
+	
